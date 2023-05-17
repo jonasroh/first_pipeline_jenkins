@@ -17,6 +17,11 @@ pipeline {
                 sh 'python3 -m unittest test_app.py'
             }
         }
+        stage('Deploy'){
+            steps {
+                sh 'python3 app.py &'
+            }
+        }
     }
 }
 
