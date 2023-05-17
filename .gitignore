@@ -1,2 +1,4 @@
 jenkins-env/
 __pycache__/
+.gitignore
+
