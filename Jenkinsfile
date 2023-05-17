@@ -20,6 +20,10 @@ pipeline {
         stage('Deploy'){
             steps {
                 sh 'python3 app.py &'
+                script {
+                    sh 'sleep 60'
+                    sh 'pkill -f "python3 app.py"'
+                }
             }
         }
     }
